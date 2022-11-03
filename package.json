@@ -5,13 +5,16 @@
   "description": "Pokemon API Rest.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "NODE_ENV=production node app.js",
+    "dev": "NODE_ENV=development nodemon app.js"
   },
   "author": "btkdevkh",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
     "mariadb": "^3.0.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.25.3",

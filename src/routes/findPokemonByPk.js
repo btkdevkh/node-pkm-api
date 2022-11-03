@@ -6,7 +6,8 @@ export const findPokemonByPk = (app) => {
     const { id } = req.params
     Pokemon.findByPk(id)
       .then(pokemon => {
-        res.json(success("GET pokemon", pokemon))
+        res.json(success("READ pokemon", pokemon))
       })
+      .catch(err => res.status(500).json({ message: "Can not READ pokemon", data: err }))
   })
 }
